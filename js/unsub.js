@@ -17,7 +17,7 @@ var email = new URLSearchParams(queryString).get("email");
 
 document.getElementById("emailAddress").innerText = email;
 
-document.getElementById("unsubButton").onclick(function () {
+document.getElementById("unsubButton").onclick = function () {
   db.collection("users")
     .where("email", "==", email)
     .limit(1)
@@ -34,4 +34,4 @@ document.getElementById("unsubButton").onclick(function () {
         return null;
       }
     });
-});
+};
