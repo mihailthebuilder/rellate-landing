@@ -26,7 +26,9 @@ document.getElementById("unsubButton").onclick(function () {
       if (!querySnapshot.empty) {
         //We know there is one doc in the querySnapshot
         const queryDocumentSnapshot = querySnapshot.docs[0];
-        return queryDocumentSnapshot.ref.delete();
+        queryDocumentSnapshot.ref.delete().then(() => {
+          console.log("Document successfully deleted");
+        });
       } else {
         console.error("No document corresponding to the query!");
         return null;
