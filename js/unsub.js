@@ -32,7 +32,7 @@ document.getElementById("unsubButton").onclick = function () {
         });
       } else {
         document.getElementById("unsubContainer").innerHTML =
-          "Something went wrong. Please reach out to Mihail on <a href='https://twitter.com/mihailbuilds'>Twitter</a> or at info@woondering.com";
+          "Something went wrong. Please reach out to Mihail on <a href='https://twitter.com/mihailbuilds'>Twitter</a> or at hello.rellate@gmail.com";
         console.error("No document corresponding to the query!");
         return null;
       }
