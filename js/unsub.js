@@ -16,3 +16,20 @@ var queryString = window.location.search;
 var email = new URLSearchParams(queryString).get("email");
 
 document.getElementById("emailAddress").innerText = email;
+
+document.getElementById("unsubButton").onclick(function () {
+  db.collection("users")
+    .where("email", "==", email)
+    .limit(1)
+    .get()
+    .then((querySnapshot) => {
+      if (!querySnapshot.empty) {
+        //We know there is one doc in the querySnapshot
+        const queryDocumentSnapshot = querySnapshot.docs[0];
+        return queryDocumentSnapshot.ref.delete();
+      } else {
+        console.error("No document corresponding to the query!");
+        return null;
+      }
+    });
+});
