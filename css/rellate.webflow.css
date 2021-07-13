@@ -335,6 +335,38 @@
   text-align: center;
 }
 
+.unsubbody {
+  background-color: #34a0a4;
+}
+
+.unsubtext {
+  margin-top: 10vh;
+  font-family: Rosario, sans-serif;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.emailspan {
+  color: #fed766;
+  font-weight: 700;
+}
+
+.unsubbutton {
+  margin-top: 3vh;
+  background-color: #fed766;
+  box-shadow: -1px -1px 1px 0 #636363, 1px 1px 1px 0 #707070;
+  font-family: Rosario, sans-serif;
+  color: #000;
+  font-weight: 700;
+}
+
+.unsubsection {
+  padding-right: 10vw;
+  padding-left: 10vw;
+}
+
 @media screen and (max-width: 991px) {
   .herocontainer {
     max-width: 90vw;
