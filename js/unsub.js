@@ -27,7 +27,8 @@ document.getElementById("unsubButton").onclick = function () {
         //We know there is one doc in the querySnapshot
         const queryDocumentSnapshot = querySnapshot.docs[0];
         queryDocumentSnapshot.ref.delete().then(() => {
-          console.log("Document successfully deleted");
+          document.getElementById("unsubContainer").innerHTML =
+            "You have been unsubscribed!";
         });
       } else {
         console.error("No document corresponding to the query!");
